@@ -26,14 +26,14 @@ export function Contact() {
   <Card
     onClick={() =>
       (window.location.href =
-        "https://wa.me/7888272941?text=Hey, I am interested")
+        "https://wa.me/7888274941?text=Hey, I am interested")
     }
     className="cursor-pointer h-40 flex flex-col justify-center text-center transition hover:bg-green-500 hover:text-white"
   >
     <CardHeader>
-      <CardTitle>Phone</CardTitle>
+      <CardTitle>Phone / Whatsapp</CardTitle>
     </CardHeader>
-    <CardContent>+917888272941</CardContent>
+    <CardContent>+917888274941</CardContent>
   </Card>
 
   {/* Location Card */}
