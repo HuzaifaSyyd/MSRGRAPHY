@@ -6,9 +6,14 @@ import Footer from "@/components/landing/footer";
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "v0 App",
-  description: "Created with v0",
-  generator: "v0.app",
+  title: "Msr Graphy",
+  description: "Cinematographer",
+  generator: "Whozaifa.vercel.app",
+  icons: {
+    icon: "/Msrlogo.png",        // ✅ Default
+    shortcut: "/Msrlogo.png",    // ✅ For Safari
+    apple: "/Msrlogo.png", // ✅ For iOS
+  },
 }
 
 const geistSans = Geist({
