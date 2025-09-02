@@ -10,9 +10,9 @@ export const metadata: Metadata = {
   description: "Cinematographer",
   generator: "Whozaifa.vercel.app",
   icons: {
-    icon: "/Msrlogo.png",        // ✅ Default
-    shortcut: "/Msrlogo.png",    // ✅ For Safari
-    apple: "/Msrlogo.png", // ✅ For iOS
+    icon: "/logo.jpg",        // ✅ Default
+    shortcut: "/logo.jpg",    // ✅ For Safari
+    apple: "/logo.jpg", // ✅ For iOS
   },
 }
 
