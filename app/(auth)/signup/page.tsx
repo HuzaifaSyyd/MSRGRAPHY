@@ -1,8 +1,7 @@
 "use client"
 
 import type React from "react"
-
-import { getBrowserSupabase } from "@/lib/supabase/client"
+import { supabase } from "@/lib/supabase/client"   // ✅ use supabase directly
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
@@ -12,7 +11,6 @@ import Link from "next/link"
 import { SiteHeader } from "@/components/site-header"
 
 export default function SignupPage() {
-  const supabase = getBrowserSupabase()
   const router = useRouter()
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
@@ -23,18 +21,23 @@ export default function SignupPage() {
     e.preventDefault()
     setError(null)
     setLoading(true)
+
     const { error } = await supabase.auth.signUp({
       email,
       password,
       options: {
-        emailRedirectTo: process.env.NEXT_PUBLIC_DEV_SUPABASE_REDIRECT_URL || `${window.location.origin}/dashboard`,
+        emailRedirectTo:
+          process.env.NEXT_PUBLIC_DEV_SUPABASE_REDIRECT_URL ||
+          `${window.location.origin}/dashboard`,
       },
     })
+
     setLoading(false)
     if (error) {
       setError(error.message)
       return
     }
+
     router.push("/dashboard")
   }
 
@@ -46,7 +49,13 @@ export default function SignupPage() {
         <form onSubmit={onSubmit} className="mt-6 space-y-4">
           <div className="space-y-2">
             <Label htmlFor="email">Email</Label>
-            <Input id="email" type="email" required value={email} onChange={(e) => setEmail(e.currentTarget.value)} />
+            <Input
+              id="email"
+              type="email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.currentTarget.value)}
+            />
           </div>
           <div className="space-y-2">
             <Label htmlFor="password">Password</Label>
