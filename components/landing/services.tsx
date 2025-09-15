@@ -3,7 +3,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 const services = [
   { title: "Full-Day Coverage", desc: "From prep to last dance—comprehensive coverage with two cameras." },
-  { title: "Highlight Film", desc: "A 5–8 minute cinematic recap with licensed music and sound design." },
+  { title: "Highlight Film", desc: "A 5–8 minute cinematic recap with music." },
   { title: "Feature Film", desc: "12–20 minute story-driven edit with speeches and vows woven together." },
   { title: "Ceremony + Speeches", desc: "Multi-cam live audio capture and clean documentary edits." },
 ]
